@@ -3,12 +3,12 @@ package com.annotations.config;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TennisCoach implements Coach{
+public class FootballCoach implements Coach{
 
 	@Override
 	public String getDailyWorkout() {
-		
-		return "Tennis Coach Workout";
+		// TODO Auto-generated method stub
+		return "Football Coach Workout";
 	}
 
 	@Override

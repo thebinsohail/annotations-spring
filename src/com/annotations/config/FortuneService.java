@@ -1,8 +1,5 @@
 package com.annotations.config;
 
-public interface Coach {
-
-	public String getDailyWorkout();
+public interface FortuneService {
 	public String getFortune();
-	
 }
