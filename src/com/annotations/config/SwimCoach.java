@@ -1,22 +1,45 @@
 package com.annotations.config;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimCoach implements Coach {
 
 	private FortuneService fortuneService;
+
+
+	@Value("${foo.email}")
+	private String email;
 	
-	public SwimCoach(FortuneService fortuneService) {
-		this.fortuneService=fortuneService;
+	@Value("${foo.username}")
+	private String username;
+	
+	public String getUsername() {
+		return username;
 	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
 	
+
+	
+	
+
+	public SwimCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+
 	@Override
 	public String getDailyWorkout() {
-		// TODO Auto-generated method stub
+
 		return "Swim Swim Swim x 10";
 	}
 
 	@Override
 	public String getFortune() {
-		// TODO Auto-generated method stub
+
 		return fortuneService.getFortune();
 	}
 
